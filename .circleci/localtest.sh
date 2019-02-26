@@ -12,6 +12,8 @@ ls
 yarn --ignore-engines
 
 git clone git@github.com:iopipe/measure.git
-measure/runmeasure.sh -l nodejs8.10 -h .circleci/baseline.handler
+ls -al
+measure/runmeasure.sh -l nodejs8.10 -h baseline.handler
+ls -al
 
 rm -rf /tmp/$$
