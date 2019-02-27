@@ -1,8 +1,8 @@
 #!/bin/bash
 __exedir="$(readlink -f -- "$(dirname -- "$0")")"
 __measuretmp=$(mktemp -d) || exit 1
-
-git clone git@github.com:iopipe/measure.git "$__measuretmp"
+MEASURE_REPO=${MEASURE_REPO:-git@github.com:iopipe/measure.git}
+git clone $MEASURE_REPO "$__measuretmp"
 
 __runtmp=$(mktemp -d) || exit 1
 cp -R * $__runtmp/  # copy .circleci dir to $__runtmp
